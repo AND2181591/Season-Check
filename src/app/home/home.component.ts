@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
   month = new Date().getMonth();
   season = '';
+  error = false;
 
   constructor() { }
 
@@ -17,7 +18,7 @@ export class HomeComponent implements OnInit {
         const lat = position.coords.latitude;
         this.season = this.getSeason(lat, this.month);
       }, 
-      err => console.log(err)
+      err => this.error = true
     );
   }
 

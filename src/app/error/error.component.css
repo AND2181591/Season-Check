@@ -1,0 +1,13 @@
+.error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+    background: rgb(135,113,0);
+    background: radial-gradient(circle, rgba(135,113,0,1) 7%, rgba(0,142,222,1) 33%, rgba(20,20,20,1) 35%);
+}
+
+.error-message {
+    text-align: center;
+}
