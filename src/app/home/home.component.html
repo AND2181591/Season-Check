@@ -1,3 +1,8 @@
 <app-season-display [season]="season"></app-season-display>
 
 <app-error *ngIf="error"></app-error>
+
+<app-spinner 
+    *ngIf="!error && !season"
+    loaderMessage="Waiting for your location...">
+</app-spinner>
