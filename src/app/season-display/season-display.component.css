@@ -13,7 +13,16 @@
     right: 20%;
     background: #f9ff5a;
     box-shadow: 0 0 10px 10px #fbff7b;
-    animation: sun-shine 2s infinite;
+    animation: sun-shine 2s infinite, sun-rise 2s cubic-bezier(0,.93,.63,1);
+}
+
+@keyframes sun-rise {
+    0% {
+        right: 110%;
+    }
+    100% {
+        right: 20%;
+    }
 }
 
 @keyframes sun-shine {
@@ -206,7 +215,7 @@ Spring
     right: 20%;
     background: #fff39b;
     box-shadow: 0 0 10px 10px #ffed8a;
-    animation: sun-shine-spring 2s infinite;
+    animation: sun-shine-spring 2s infinite, sun-rise 2s cubic-bezier(0,.93,.63,1);
 }
 
 @keyframes sun-shine-spring {
@@ -251,19 +260,19 @@ Summer
     top: 10%;
     right: 20%;
     background: #ffe740;
-    box-shadow: 0 0 10px 10px #ffe242;
-    animation: sun-shine-summer 2s infinite;
+    box-shadow: 0 0 10px 10px #ffeb7b;
+    animation: sun-shine-summer 2s infinite, sun-rise 2s cubic-bezier(0,.93,.63,1);
 }
 
 @keyframes sun-shine-summer {
     0% {
-        box-shadow: 0 0 10px 10px #ffe242;
+        box-shadow: 0 0 10px 10px #ffeb7b;
     }
     50% {
-        box-shadow: 0 0 10px 13px #ffe44e;
+        box-shadow: 0 0 10px 13px #ffeb7b;
     }
     100% {
-        box-shadow: 0 0 10px 10px #ffe242;
+        box-shadow: 0 0 10px 10px #ffeb7b;
     }
 }
 
@@ -296,7 +305,7 @@ Autumn
     right: 20%;
     background: #ffef7c;
     box-shadow: 0 0 10px 10px #fff1a3;
-    animation: sun-shine-autumn 2s infinite;
+    animation: sun-shine-autumn 2s infinite, sun-rise 2s cubic-bezier(0,.93,.63,1);
 }
 
 @keyframes sun-shine-autumn {

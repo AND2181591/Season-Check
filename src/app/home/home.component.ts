@@ -25,11 +25,11 @@ export class HomeComponent implements OnInit {
     if (month === 11 || month < 2) {
       return lat > 0 ? 'winter' : 'summer';
     } else if (month > 1 && month < 5) {
-      return lat > 0 ? 'spring' : 'fall';
+      return lat > 0 ? 'spring' : 'autumn';
     } else if (month > 4 && month < 8) {
       return lat > 0 ? 'summer' : 'winter';
     } else {
-      return lat > 0 ? 'fall' : 'spring'
+      return lat > 0 ? 'autumn' : 'spring'
     }
   }
 }
