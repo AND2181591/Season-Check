@@ -1,0 +1,12 @@
+button {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    border: solid 1px;
+    transition: color .3s, background .3s;
+}
+
+button:hover {
+    color: #fff;
+    background: #6494ff;
+}

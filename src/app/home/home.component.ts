@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   month = new Date().getMonth();
+  lat: number = 0;
   season = '';
   error = false;
 
@@ -15,8 +16,9 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     window.navigator.geolocation.getCurrentPosition(
       (position) => {
-        const lat = position.coords.latitude;
-        this.season = this.getSeason(lat, this.month);
+        console.log(position.coords);
+        this.lat = position.coords.latitude;
+        this.season = this.getSeason(this.lat, this.month);
       }, 
       err => this.error = true
     );
@@ -31,6 +33,16 @@ export class HomeComponent implements OnInit {
       return lat > 0 ? 'summer' : 'winter';
     } else {
       return lat > 0 ? 'autumn' : 'spring'
+    }
+  }
+
+  updateLocation(): void {
+    if (Math.sign(this.lat) === 1) {
+      this.lat = -Math.abs(this.lat);
+      this.season = this.getSeason(this.lat, this.month);
+    } else if (Math.sign(this.lat) === -1) {
+      this.lat = Math.abs(this.lat);
+      this.season = this.getSeason(this.lat, this.month);
     }
   }
 }

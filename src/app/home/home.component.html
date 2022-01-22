@@ -1,4 +1,12 @@
-<app-season-display [season]="season"></app-season-display>
+<button class="btn" (click)="updateLocation()">
+    <span *ngIf="lat > 0">View South</span>
+    <span *ngIf="lat < 0">View North</span> 
+    Hemisphere
+</button>
+
+<app-season-display 
+    [season]="season"
+    (viewLocation)="updateLocation()"></app-season-display>
 
 <app-error *ngIf="error"></app-error>
 

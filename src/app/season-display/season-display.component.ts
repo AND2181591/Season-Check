@@ -12,5 +12,4 @@ export class SeasonDisplayComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }
